@@ -1,0 +1,48 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:fillViewport="true">
+    <LinearLayout android:orientation="vertical" android:padding="16dp"
+        android:layout_width="match_parent" android:layout_height="wrap_content">
+        <TextView android:text="Web2App MCQ Solver" android:textSize="24sp"
+            android:textStyle="bold" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+        <TextView android:text="API profiles" android:textStyle="bold" android:textSize="18sp"
+            android:layout_marginTop="16dp" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+        <Spinner android:id="@+id/profileSpinner" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+        <EditText android:id="@+id/profileNameEdit" android:hint="Profile name (e.g. Personal Worker)"
+            android:singleLine="true" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+        <EditText android:id="@+id/workerUrlEdit" android:hint="Cloudflare Worker URL"
+            android:inputType="textUri" android:singleLine="true"
+            android:layout_width="match_parent" android:layout_height="wrap_content"/>
+        <EditText android:id="@+id/tokenEdit" android:hint="API token"
+            android:inputType="textPassword" android:singleLine="true"
+            android:layout_width="match_parent" android:layout_height="wrap_content"/>
+        <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <Button android:id="@+id/saveProfileButton" android:text="Save profile"
+                android:layout_weight="1" android:layout_width="0dp" android:layout_height="wrap_content"/>
+            <Button android:id="@+id/deleteProfileButton" android:text="Delete"
+                android:layout_weight="1" android:layout_width="0dp" android:layout_height="wrap_content"/>
+        </LinearLayout>
+        <Button android:id="@+id/testConnectionButton" android:text="Test Worker (sample request)"
+            android:layout_width="match_parent" android:layout_height="wrap_content"/>
+        <TextView android:id="@+id/configStatusText" android:text="Credentials are stored encrypted on this device."
+            android:textSize="12sp" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+        <TextView android:text="Camera" android:textStyle="bold" android:textSize="18sp"
+            android:layout_marginTop="20dp" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+        <androidx.camera.view.PreviewView android:id="@+id/previewView"
+            android:layout_width="match_parent" android:layout_height="320dp"
+            android:layout_marginTop="8dp"/>
+        <Button android:id="@+id/captureButton" android:text="Take photo"
+            android:layout_width="match_parent" android:layout_height="wrap_content"/>
+        <EditText android:id="@+id/questionEdit" android:hint="Question text"
+            android:minLines="3" android:gravity="top"
+            android:layout_width="match_parent" android:layout_height="wrap_content"/>
+        <EditText android:id="@+id/optionsEdit" android:hint="One answer option per line"
+            android:minLines="4" android:gravity="top"
+            android:layout_width="match_parent" android:layout_height="wrap_content"/>
+        <Button android:id="@+id/solveButton" android:text="Get correct option"
+            android:layout_width="match_parent" android:layout_height="wrap_content"/>
+        <TextView android:id="@+id/resultText" android:text="Answer will appear here"
+            android:textSize="18sp" android:padding="12dp"
+            android:layout_width="match_parent" android:layout_height="wrap_content"/>
+    </LinearLayout>
+</ScrollView>
